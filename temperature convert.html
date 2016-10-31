@@ -6,66 +6,48 @@
 
 
     <script>
-
         function calculate(key) {
             var cel;
             var far;
-
-
             try {
-
-
-
-
             }
             catch (e) {
                 console.log(e);
             }
-
             if (key == 'c') {
                 cel = document.getElementById("degreesCelsius").value;
                 far = (cel * 1.8) + 32;
-
-
                 if (isNaN(far)){
                     document.getElementById("degreesFahrenheit").value = "not a number.";
                 }
                 else {
-                    document.getElementById("degreesFahrenheit").value = far;
+                    document.getElementById("degreesFahrenheit").value = far.toFixed(4);
                 }
-
             }
             else {
                 far = document.getElementById("degreesFahrenheit").value;
                 cel = (far - 32) * 5 / 9;
-
-
                 document.getElementById("degreesCelsius").value = cel;
-
                 if (isNaN(far)){
                     document.getElementById("degreesCelsius").value = "not a number.";
                 }
                 else {
-                    document.getElementById("degreesCelsius").value = far;
+                    document.getElementById("degreesCelsius").value = cel.toFixed(3);
                 }
             }
-
-
-
-}
-
+        }
     </script>
 
 
 
-<style>
-    html {
-        background-color: aqua;
-        color: blueviolet;
-    }
-    fieldset {
-        border solid aqua;
-    }
+    <style>
+        html {
+            background-color: aqua;
+            color: blueviolet;
+        }
+        fieldset {
+            border solid aqua;
+        }
     </style>
 
 
@@ -85,7 +67,7 @@
 
 
 
-                <label for="degreesCelsius"> degrees celsius:</label>
+<label for="degreesCelsius"> degrees celsius:</label>
 
 <h3>equals:</h3>
 <br>
@@ -108,7 +90,7 @@
 <br>
 <fieldset>
 
-<img src="https://servicewhale.com/pages/wp-content/uploads/2015/04/111797664-617x416.jpg">
+    <img src="https://servicewhale.com/pages/wp-content/uploads/2015/04/111797664-617x416.jpg">
 
 </fieldset>
 
